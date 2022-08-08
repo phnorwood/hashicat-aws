@@ -114,6 +114,7 @@ resource "aws_eip" "hashicat" {
 
   tags = {
     Department = "devops"
+    Billable = true
   }
 }
 
