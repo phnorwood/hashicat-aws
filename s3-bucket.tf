@@ -1,9 +1,9 @@
 module "s3_bucket" {
+  source = "terraform-aws-modules/s3-bucket/aws"
 
-  source  = "app.terraform.io/phnorwood-hc-training/s3-bucket/aws"
-  version = "2.8.0"
-
-  acl           = "private"
+  bucket = "my-s3-bucket"
+  bucket_prefix = "phnorwood"
+  acl    = "private"
 
   versioning = {
     enabled = true
